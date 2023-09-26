@@ -2,7 +2,7 @@
 - [Number](#number)
   
 
-#### Number
+## Number
 Number is a very complicated thing in Programming.There are different types of number,for example-
 - **Integers:** This is a number without fraction,for example-600,45,78,-3
 - **Floating point number:** This is a decimal point and decimal places,for example - `12.5, 67.9889`
