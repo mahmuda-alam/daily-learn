@@ -6,9 +6,9 @@
 ## How Javascript Executes Code
 Javascript is a synchronous and single threated language. Means it executes line by line and executes a single command in a specific order. Everything in javascript is wrapped inside execution context. Execution context has two components. Javascript code is executed in two phases.They are memory allocation phase and code execution phase.
         
-`Memory allocation phase`: In this phase, it starts skimming all the code. All the functions and variables are stored in a memory component in execution context. In the case of a function of javascript is copied all the function  and a variable is declared as `undifined` in a memory block. No matter where that function and variable are declared, they are moved top of the code as a memory component before execution the code. This is called `hoisting` to move the function and variable top of the code.
+**Memory allocation phase:** In this phase, it starts skimming all the code. All the functions and variables are stored in a memory component in execution context. In the case of a function of javascript is copied all the function  and a variable is declared as `undifined` in a memory block. No matter where that function and variable are declared, they are moved top of the code as a memory component before execution the code. This is called `hoisting` to move the function and variable top of the code.
 
-`Code execution phase`: In this phase, again it starts reading the code and executes line by line in a code component.
+**Code execution phase:** In this phase, again it starts reading the code and executes line by line in a code component.
 
 Let's see the whole process through an example.
 
