@@ -1,6 +1,12 @@
 # Contents
 - [How Javascript Executes Code](#how-javascript-executes-code)
 - [Number](#number)
+- [Terminal Commands](#terminal-command)
+  	- [Create Directory](#create-directory)
+  	- [Navigate Directory](#navigate-directory)
+  	- [Create File](#create-file)
+  	- [Show File List](#show-file-list)
+  	- [Open VS code](#open-vs-code)
 
 
 ## How Javascript Executes Code
@@ -115,3 +121,43 @@ Now if you want to get your expected result, you need to convert the number `str
 let myNumber = "45";
 myNumber = Number(myNumber) + 3; // Output will be 48, because 'myNumber' has converted into Number before add operation.
 ```
+
+
+# Terminal Command
+
+#### Create Directory
+To create a directory:
+
+`mkdir <dir-name>`
+
+#### Navigate Directory
+To navigate into directory:
+
+`cd <dir-name>`
+
+To move out from a directory:
+
+`cd ..`
+
+#### Create File
+To create a file:
+
+`touch <file-name>`
+
+#### Show File List
+To show list of files and directories:
+
+`ls`
+
+To show all files and directories including hidden:
+
+`ls -a`
+
+#### Open VS Code
+To open current folder into the VS code:
+
+`code .`
+
+
+
+
