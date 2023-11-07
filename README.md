@@ -4,9 +4,14 @@
 
 
 ## How Javascript Executes Code
-Javascript is a synchronous and single threated language. Means it executes line by line and executes a single command in a specific order. Everything in javascript is wrapped inside execution context. Execution context has two components. Javascript code is executed in two phases.They are memory allocation phase and code execution phase.
+**Javascript is a synchronous and single threaded language.** That means it executes code line by line. It executes a single command in a specific order. Everything in javascript is wrapped inside execution context. Execution context has two components.
+
+1. **Memory Component:** It is also known as **Variable Environment.** It consist of Key value pair and functions are stored. The **variable environment** is where all the Variables and Functions are stored.
+2. **The Code Component:** It consists of lines of code. It executes one line of code at a time. It is also called a **thread of execution** means each line of code is executed one by one.
+
+Javascript code is executed in two phases.They are **memory allocation phase** and **code execution phase.**
         
-**Memory allocation phase:** In this phase, it starts skimming all the code. All the functions and variables are stored in a memory component in execution context. In the case of a function of javascript is copied all the function  and a variable is declared as `undifined` in a memory block. No matter where that function and variable are declared, they are moved top of the code as a memory component before execution the code. This is called `hoisting` to move the function and variable top of the code.
+**Memory allocation phase:** In this phase, it starts skimming all the code. All the functions and variables are stored in a memory component in execution context. In case of a function of javascript is copied all the function code into a memory block but in case of a variable, it assigns `undefined` as a default value. No matter where that functions or variables are declared, they are moved top of the code as a memory component before execution of the code. This is called **hoisting**. So hoisting means, move the function and variable declaration at top of the code.
 
 **Code execution phase:** In this phase, again it starts reading the code and executes line by line in a code component.
 
@@ -15,40 +20,70 @@ Let's see the whole process through an example.
 ```js
 var number = 4;
 
-function Square (n) {
-	var res = n * n;
+function sum (a, b) {
+	var res = a + b;
 	return res;
 }
 
-var newNumber = Square(3);
+var newNumber = sum(3, 5);
 ```
 
-So the memory allocaton phase for these code is allocated like this:
+So in the memory allocaton phase, these code are allocated like this:
 
 ```js
+// Global memory component
 number: undefined;
 
-Square: function Square (n) {
-	var res = n * n;
+sum: function sum (a, b) {
+	var res = a + b;
 	return res;
 }
 
 newNumber: undefined;
 ```
 
-Code allocation phase is allocated like this:
-`n = 4;`
-`res = 16;`
+Then it will start the next phase code execution like this:
 
-Then it assigns the code-
 ```js
+// Global memory component
 number: 4;
-Square: function Square (n) {
-	var res = n * n;
+sum: function sum (a, b) {
+	var res = a + b;
 	return res;
 }
-newNumber: 16;
+newNumber: sum(3, 5);
 ```
+Now `sum` function is invoked. So it will create another same loop from above, memory allocation phase and code execution phase.
+
+In memory allocation phase it looks like this:
+
+```js
+// 'sum' function's memory component
+a: undefined
+b: undefined
+res: undefined
+```
+
+Then in code executation phase it will work like this:
+
+```js
+a: 3;
+b: 5;
+res: 8;
+```
+
+At last the function return `8` to the `newNumber`. So the final result of the global memory component will be:
+
+```js
+// Global memory component
+number: 4;
+sum: function sum (a, b) {
+	var res = a + b;
+	return res;
+}
+newNumber: 8;
+```
+
 
 ## Number
 Number is a very complicated thing in Programming.There are different types of number,for example-
