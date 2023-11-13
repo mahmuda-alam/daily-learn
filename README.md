@@ -1,7 +1,15 @@
 # Contents
 - [How Javascript Executes Code](#how-javascript-executes-code)
 - [Number](#number)
-- [Terminal Commands](#terminal-command)
+- [Git Commands](#git-commands)
+	- [Set Git User Name and Email](#set-git-user-name-and-email)
+ 	- [Create Branch](#create-branch)
+    - [Stage Files in Git](#stage-files-in-git)
+    - [Set Commit Message](#set-commit-message)
+    - [Upload Changes to Remote Branch](#upload-changes-to-remote-branch)
+    - [Check Current Status](#check-current-status)
+    - [Check All Commits](#check-all-commits)
+- [Terminal Commands](#terminal-commands)
   	- [Create Directory](#create-directory)
   	- [Navigate Directory](#navigate-directory)
   	- [Create File](#create-file)
@@ -123,17 +131,17 @@ myNumber = Number(myNumber) + 3; // Output will be 48, because 'myNumber' has co
 ```
 
 
-# Terminal Command
+# Terminal Commands
 
 #### Create Directory
 To create a directory:
 
-`mkdir <dir-name>`
+`mkdir <dir_name>`
 
 #### Navigate Directory
 To navigate into directory:
 
-`cd <dir-name>`
+`cd <dir_name>`
 
 To move out from a directory:
 
@@ -142,7 +150,7 @@ To move out from a directory:
 #### Create File
 To create a file:
 
-`touch <file-name>`
+`touch <file_name>`
 
 #### Show File List
 To show list of files and directories:
@@ -157,6 +165,56 @@ To show all files and directories including hidden:
 To open current folder into the VS code:
 
 `code .`
+
+
+# Git Commands
+
+#### Set Git User Name and Email
+To set git user name and email in current repository
+
+`git config user.name <user_name>`
+
+`git config user.email <user_email>`
+
+To set git user name and email globally
+
+`git config --global user.name <user_name>`
+
+`git config --global user.email <user_email>`
+
+
+#### Create Branch
+To create a new branch
+
+`git checkout -b <branch_name>`
+
+#### Stage Files in Git
+
+`git add <file_path>`
+
+To add all files at a single command
+
+`git add .`
+
+#### Set Commit Message
+
+`git commit -m <message>`
+
+#### Upload Changes to Remote Branch
+
+`git push origin <branch_name>`
+
+`git push origin HEAD`(HEAD means current branch)
+
+#### Check Current Status
+To see current status of the folder
+
+`git status`
+
+#### Check All Commits
+To check all commits 
+
+`git log`
 
 
 
