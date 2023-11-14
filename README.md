@@ -2,13 +2,15 @@
 - [How Javascript Executes Code](#how-javascript-executes-code)
 - [Number](#number)
 - [Git Commands](#git-commands)
-	- [Set Git User Name and Email](#set-git-user-name-and-email)
- 	- [Create Branch](#create-branch)
+    - [Set Git User Name and Email](#set-git-user-name-and-email)
+    - [Create Branch](#create-branch)
     - [Stage Files in Git](#stage-files-in-git)
     - [Set Commit Message](#set-commit-message)
     - [Upload Changes to Remote Branch](#upload-changes-to-remote-branch)
     - [Check Current Status](#check-current-status)
     - [Check All Commits](#check-all-commits)
+    - [Fetch Remote Branches to Local Repository](#fetch-remote-branches-to-local-repository)
+    - [Switch Branch](#switch-branch)
 - [Terminal Commands](#terminal-commands)
   	- [Create Directory](#create-directory)
   	- [Navigate Directory](#navigate-directory)
@@ -215,6 +217,12 @@ To see current status of the folder
 To check all commits 
 
 `git log`
+
+#### Fetch Remote Branches to Local Repository
+`git fetch`
+
+#### Switch Branch
+`git checkout<branch_name>`
 
 
 
