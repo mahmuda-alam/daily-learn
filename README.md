@@ -186,9 +186,13 @@ To set git user name and email globally
 
 
 #### Create Branch
-To create a new branch
+To create a new branch from current branch
 
 `git checkout -b <branch_name>`
+
+To create a new branch from other branch
+
+`git checkout -b <branch_name> <source_branch_name>`
 
 #### Stage Files in Git
 
