@@ -1,6 +1,8 @@
 # Contents
 - [How Javascript Executes Code](#how-javascript-executes-code)
 - [Number](#number)
+- [Type of Function](#type-of-function)
+  	- [Arrow Function](#arrow-function)
 - [Git Commands](#git-commands)
     - [Set Git User Name and Email](#set-git-user-name-and-email)
     - [Create Branch](#create-branch)
@@ -132,6 +134,31 @@ let myNumber = "45";
 myNumber = Number(myNumber) + 3; // Output will be 48, because 'myNumber' has converted into Number before add operation.
 ```
 
+# Type of Function
+#### Arrow Function
+In Javascript, there are two types of function. we have `normal function` and `arrow function`. `Arrow function` `()=>{}` is concise way of writing javascript functions in shorter way. They make our code more structured and readable. `Arrow function` are anonymous function. Functions without a name and are not bound by an identifier. `Arrow function` do not return any value and can be declared without function keyword.
+
+Example:
+```js
+const multiply = (num1, num2) => {
+const result = num1 * num2;
+return result
+}
+```
+
+If the `return` statement is the only statement in the function, you can even have a shorter function expression. For example:
+```js
+const multiply = (num1, num2) => {
+return num1 * num2;
+}
+```
+
+This function only contains the return statement. With arrow functions, we can have something shorter like this:
+```js
+const multiply = (num1,num2) => num1 * num2
+```
+**Todo: Need to add more details** 
+
 
 # Terminal Commands
 
@@ -227,6 +254,9 @@ To check all commits
 
 #### Switch Branch
 `git checkout<branch_name>`
+
+
+
 
 
 
