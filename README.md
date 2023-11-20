@@ -5,6 +5,7 @@
   	- [Arrow Function](#arrow-function)
   	- [Pure Function](#pure-function)
   	- [First Class Function](#first-class-function)
+  	- [Callback Function](#callback-function)
 - [Git Commands](#git-commands)
     - [Set Git User Name and Email](#set-git-user-name-and-email)
     - [Create Branch](#create-branch)
@@ -223,6 +224,26 @@ return 'Hello World'
 }
 let myFunction = outerFunction()
 console.log(myFunction); //Output will be: Hello world
+```
+
+#### Callback Function
+A `callback` is a function that is passed as an arguments to an another function, and is called after the main function has finished its execution. The main function is called with a callback function as its arguments, and when the main function is finshed, it calls the callback function to provide a result. Callbacks allow you to handle the results of an asyncronous operation in a non-blocking manner, which means that the program can continue to run while the operation is being executed.
+
+Example:
+```js
+mainFunction(callback) {
+console.log("Performing Operation");
+setTimeOut(function() {
+callback("Operation Complete")
+}, 1000);
+}
+
+callBackFunction(result) {
+console.log('result: ' + result);
+}
+
+mainFunction(callbackFunction);
+
 ```
 
 
