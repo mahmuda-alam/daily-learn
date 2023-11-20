@@ -3,6 +3,8 @@
 - [Number](#number)
 - [Type of Function](#type-of-function)
   	- [Arrow Function](#arrow-function)
+  	- [Pure Function](#pure-function)
+  	- [First Class Function](#first-class-function)
 - [Git Commands](#git-commands)
     - [Set Git User Name and Email](#set-git-user-name-and-email)
     - [Create Branch](#create-branch)
@@ -158,6 +160,71 @@ This function only contains the return statement. With arrow functions, we can h
 const multiply = (num1,num2) => num1 * num2
 ```
 **Todo: Need to add more details** 
+
+
+#### Pure function
+A `pure function` is a function that always return the same result if the same arguments are passed. It does not depend on any data change during a program's execution. Rather it only depends on its input arguments.
+Also a pure function does not produce any observable side effcts such as network requests or data mutation etc.
+
+**1.Same Input => Same Output**
+This example returns a value based on the given parameters, regardless of where/when you call it.
+If you pass 2 and 4, you’ll always get 6. Nothing else affects the output.
+```js
+const add = (x, y)=> x + y;
+add(2, 4); //Output will be 6.
+add(2, 4); //Output will be 6.
+```
+```js
+let x = 2;
+const add = (y)=> {
+x+=y;
+}
+add(4); Output will be 6, the first time
+add(4); Output wil be 10
+//So this is not a pure function.
+```
+
+#### First Class Function
+
+In javascript, Functions are first class objects, which means they can be:
+
+- stored in a variable, objects or array
+- passed as an arguments to a function
+- returned from a function
+  
+**Storing a function**
+  Functions can be stored in 3 ways:
+  - store in a variable `let fn = function doSomethig() {}`
+  - store in an object ` let obj = { doSomething : function(){} }`
+  - store in an array `arr.puch(function doSomething() {})`
+    
+**Function as an arguments**
+
+We are passing our sayHello() function as an argument to the greet() function, this explains how we are treating the function as a value.
+```js
+function sayHello() {
+return hello;
+}
+function greet (helloFn, name) {
+console.log(helloFn() + name);
+}
+greet(sayHello, john); //Output will be: hello, John
+```
+
+**Returning a function**
+
+In this example, we are returning a function from another function - We can return a function because functions in JavaScript are treated as values.
+
+```js
+function outerFunction() {
+return function innerFunction() {
+return 'Hello World'
+}
+}
+let myFunction = outerFunction()
+console.log(myFunction); //Output will be: Hello world
+```
+
 
 
 # Terminal Commands
