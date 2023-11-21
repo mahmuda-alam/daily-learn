@@ -5,6 +5,7 @@
   	- [Arrow Function](#arrow-function)
   	- [Pure Function](#pure-function)
   	- [First Class Function](#first-class-function)
+  	- [Higher Order Function](#higher-order-funtion)
   	- [Anonymous Function](#anonymous-function)
   	- [Callback Function](#callback-function)
 - [Git Commands](#git-commands)
@@ -225,6 +226,33 @@ return 'Hello World'
 }
 let myFunction = outerFunction()
 console.log(myFunction); //Output will be: Hello world
+```
+
+#### Higher Order Function
+`Higher order function` is a function that takes one or more function as an arguments, or returns a function as its result.
+
+Example:
+```js
+function callbackFunction () {
+console.log('I am a callback function');
+}
+
+function higherOrderFunction(func) {
+console.log('I am a higher order function')
+func()
+}
+higherOrderFunction(callbackFunction);
+```
+
+There are several different types of higher order functions like map, filter and reduce. 
+
+Example: Suppose we want to add 10 to every element in a array. We can use the map() method to map over every element in the array to add 10 to it.
+
+```js
+const arr = [1, 2, 3, 4, 5];
+const output = arr.map((num) => num += 10)
+console.log(arr); //OUtput will be: [1, 2, 3, 4, 5]
+console.log(output); //Output will be: [11, 12, 13, 14, 15]
 ```
 
 #### Anonymous Function
