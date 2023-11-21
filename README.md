@@ -5,6 +5,7 @@
   	- [Arrow Function](#arrow-function)
   	- [Pure Function](#pure-function)
   	- [First Class Function](#first-class-function)
+  	- [Anonymous Function](#anonymous-function)
   	- [Callback Function](#callback-function)
 - [Git Commands](#git-commands)
     - [Set Git User Name and Email](#set-git-user-name-and-email)
@@ -224,6 +225,28 @@ return 'Hello World'
 }
 let myFunction = outerFunction()
 console.log(myFunction); //Output will be: Hello world
+```
+
+#### Anonymous Function
+`Anonymous` is a function that does not have any name associated with it. Normally we use the function keyword before the function name to define a function in JavaScript, however in anonymous function in JavaScript we use only the function keyword without the function name. 
+
+An `Anonymous function` is not accessible after its initial creation , we can only access this function after storing this function in a variable as a value. An `Anonymous function` can also have multiple arguments, but only one expression.
+
+Example:
+```js
+let greet = function() {
+console.log("Welcome to World!")
+}
+greet(); //Output will be: Welcome to World!
+```
+
+We pass arguments to the anonymous function.
+
+```js
+let greet = function(platform) {
+console.log("welcome to", platform )
+}
+greet(World!); //Output will be: Welcome to World!
 ```
 
 #### Callback Function
