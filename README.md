@@ -8,6 +8,7 @@
   	- [Higher Order Function](#higher-order-funtion)
   	- [Anonymous Function](#anonymous-function)
   	- [Callback Function](#callback-function)
+  	- [Hoisting](#hoisting)
 - [Git Commands](#git-commands)
     - [Set Git User Name and Email](#set-git-user-name-and-email)
     - [Create Branch](#create-branch)
@@ -294,7 +295,83 @@ console.log('result: ' + result);
 }
 
 mainFunction(callbackFunction);
+```
 
+#### Hoisting
+`Hoisting` is a concept that enables us to extract values from variables and function even before initializing/assigning value without getting any errors and this happens during the 1st phase(`memory alocation phase`) of the execution context.
+
+**Features of `hoisting`**
+- In JavaScript, `Hoisting` is default behavior of moving all declaretions at the top of scope before code execution. Basically it gives us an advantages that no matter where functions and variables are declared, they are moved at the top of their scope, regardless of weather their scope is global or local.
+- It allows us to call functions before even writing them in our code.
+- JavaScript only hoists declarations, not initialization.
+
+Examples:
+**Hoisting var variable**
+  
+ ```js
+ console.log(name) //Output will be: undefined
+
+ var name = "Dillion"
+ ```
+ ```js
+ console.log(name) //ReferenceError: name is not defined.
+
+ var my name = "Dillion";
+```
+
+```js
+console.log(name) //Output will be: undefined
+
+var name = "Dillion"
+
+console.log(name) //Output will be: Dillion
+ ```
+
+**Functions `hoisting`**
+
+```js
+function printHello() {
+  console.log("hello")
+}
+
+printHello() Output will be: hello
+```
+
+```js
+printHello() //Output will be: hello.
+
+function printHello() {
+  console.log("hello")
+}
+```
+
+```js
+printHello() //Output will be: hello
+
+printDillion()
+// ReferenceError: printDillion is not defined
+
+function printHello() {
+  console.log('hello')
+
+  function printDillion() {
+    console.log("dillion")
+  }
+}
+```
+
+```js
+printHello() // Output will be: hello
+
+function printHello() {
+  printDillion() //Output will be: dillion
+
+  console.log('hello')
+
+  function printDillion() {
+    console.log("dillion")
+  }
+}
 ```
 
 
@@ -304,7 +381,7 @@ mainFunction(callbackFunction);
 #### Create Directory
 To create a directory:
 
-`mkdir <dir_name>`
+`mkdir <dir_name>`th
 
 #### Navigate Directory
 To navigate into directory:
