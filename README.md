@@ -5,7 +5,7 @@
   	- [Arrow Function](#arrow-function)
   	- [Pure Function](#pure-function)
   	- [First Class Function](#first-class-function)
-  	- [Higher Order Function](#higher-order-funtion)
+  	- [Higher Order Function](#higher-order-function)
   	- [Anonymous Function](#anonymous-function)
   	- [Callback Function](#callback-function)
   	- [Hoisting](#hoisting)
@@ -19,6 +19,7 @@
     - [Check All Commits](#check-all-commits)
     - [Fetch Remote Branches to Local Repository](#fetch-remote-branches-to-local-repository)
     - [Switch Branch](#switch-branch)
+    - [Change Last Commit](#change-last-commit)
 - [Terminal Commands](#terminal-commands)
   	- [Create Directory](#create-directory)
   	- [Navigate Directory](#navigate-directory)
@@ -471,6 +472,19 @@ To check all commits
 #### Switch Branch
 `git checkout<branch_name>`
 
+#### Change Last Commit
+Follow the below commands step by step.
+
+1. Rewriting the most recent commit message.
+```sh
+git commit --amend
+```
+Now changing the commit message in the terminal.
+
+2. Use the push this command to force push over the old commit.
+```sh
+git push --force-with-lease origin <branch_name>
+```
 
 
 
