@@ -26,6 +26,7 @@
   	- [Create File](#create-file)
   	- [Show File List](#show-file-list)
   	- [Open VS code](#open-vs-code)
+  	- [Exit From Vim Terminal](#exit-from-vim-terminal)
 
 
 ## How Javascript Executes Code
@@ -411,6 +412,13 @@ To show all files and directories including hidden:
 To open current folder into the VS code:
 
 `code .`
+
+#### Exit From Vim Terminal
+Follow the below commands:
+
+1. Press `esc`
+2. Press `:`
+3. Write `wq` for save and exit or write `q` for exit without save
 
 
 # Git Commands
