@@ -8,6 +8,7 @@
   	- [Higher Order Function](#higher-order-function)
   	- [Anonymous Function](#anonymous-function)
   	- [Callback Function](#callback-function)
+  	- [Callback Hell](#callback-hell)
   	- [Hoisting](#hoisting)
 - [Git Commands](#git-commands)
     - [Set Git User Name and Email](#set-git-user-name-and-email)
@@ -299,8 +300,63 @@ console.log('result: ' + result);
 mainFunction(callbackFunction);
 ```
 
+#### Callback Hell
+`Callback hell` is essentially neated callbacks stacked below one another forming a pyramid structure. Every callback depends for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code. The “hell” can be manageable if you know what to do with it.
+
+Example:
+
+```js
+const takeOrder = (cus, callback) => {
+    console.log(`Take order from ${cus}`);
+    callback(cus);
+}
+
+const processOrder = (customer, callback) => {
+    setTimeout(() => {
+        console.log(`Process order for ${customer}`);
+        callback(customer);
+    }, 1000);
+}
+
+const completeOrder = (customer, callback) => {
+    console.log(`Order completed for ${customer}`);
+    callback(customer);
+}
+
+const generateBill = (customer, callback) => {
+    setTimeout(() => {
+        console.log(`Generate Bill for ${customer}`);
+        callback(customer);
+    }, 1000);
+}
+
+const greetings = (customer) => {
+    console.log(`Thank you, ${customer} for coming.`);
+}
+
+takeOrder('customer1', (customer) => {
+    processOrder(customer, (customer) => {
+        completeOrder(customer, (customer) => {
+            generateBill(customer, (customer) => {
+                greetings(customer);
+            })
+        });
+    });
+})
+
+takeOrder('customer2', (customer) => {
+    processOrder(customer, (customer) => {
+        completeOrder(customer, (customer) => {
+            generateBill(customer, (customer) => {
+                greetings(customer);
+            })
+        });
+    });
+})
+```
+
 #### Hoisting
-`Hoisting` is a concept that enables us to extract values from variables and function even before initializing/assigning value without getting any errors and this happens during the 1st phase(`memory alocation phase`) of the execution context.
+`Hoisting` is a concept that enables us to extract values from variables and function even before initializing/assigning value without getting any errors and this happens during the 1st phase(`memory alocation phase`) of the execution context. 
 
 **Features of `hoisting`**
 - In JavaScript, `Hoisting` is default behavior of moving all declaretions at the top of scope before code execution. Basically it gives us an advantages that no matter where functions and variables are declared, they are moved at the top of their scope, regardless of weather their scope is global or local.
