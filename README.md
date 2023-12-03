@@ -10,6 +10,8 @@
   	- [Callback Function](#callback-function)
   	- [Callback Hell](#callback-hell)
   	- [Hoisting](#hoisting)
+- [Css](#css)
+    - [How to make element round](#how-to-make-element-round)
 - [Git Commands](#git-commands)
     - [Set Git User Name and Email](#set-git-user-name-and-email)
     - [Create Branch](#create-branch)
@@ -430,6 +432,18 @@ function printHello() {
     console.log("dillion")
   }
 }
+```
+
+
+# Css
+
+#### How to make element round?
+
+Use the `border-radius` property to add rounded corners to an element. 50% will make the element circular:
+```css
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 ```
 
 
