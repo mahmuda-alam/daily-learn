@@ -12,6 +12,7 @@
   	- [Hoisting](#hoisting)
 - [Css](#css)
     - [How to make element round](#how-to-make-element-round)
+    - [How to add space between items](#how-to-add-space-between-items)
 - [Git Commands](#git-commands)
     - [Set Git User Name and Email](#set-git-user-name-and-email)
     - [Create Branch](#create-branch)
@@ -444,6 +445,14 @@ Use the `border-radius` property to add rounded corners to an element. 50% will 
   width: 200px;
   height: 200px;
   border-radius: 50%;
+```
+
+#### How to add space between items?
+Items will have space between them.
+
+```css
+display: flex;
+justify-content: space-between;
 ```
 
 
