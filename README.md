@@ -287,14 +287,14 @@ A `callback` is a function that is passed as an arguments to an another function
 Example:
 ```js
 mainFunction(callback) {
-console.log("Performing Operation");
-setTimeOut(function() {
-callback("Operation Complete")
-}, 1000);
+	console.log("Performing Operation");
+	setTimeOut(function() {
+		callback("Operation Complete")
+	}, 1000);
 }
 
 callBackFunction(result) {
-console.log('result: ' + result);
+	console.log('result: ' + result);
 }
 
 mainFunction(callbackFunction);
@@ -306,9 +306,9 @@ mainFunction(callbackFunction);
 Example:
 
 ```js
-const takeOrder = (cus, callback) => {
-    console.log(`Take order from ${cus}`);
-    callback(cus);
+const takeOrder = (customer, callback) => {
+    console.log(`Take order from ${customer}`);
+    callback(customer);
 }
 
 const processOrder = (customer, callback) => {
